@@ -1,0 +1,73 @@
+!DOCTYPE html
+html lang=el
+head
+  meta charset=UTF-8
+  titleΠώς επηρεάζει ο ΦΠΑ το κέρδος σουtitle
+  style
+    body { font-family Arial, sans-serif; padding 20px; }
+    table { border-collapse collapse; width 100%; margin-top 20px; }
+    th, td { border 1px solid #ccc; padding 8px; text-align center; }
+    th { background-color #f2f2f2; }
+    caption { font-size 1.2em; font-weight bold; margin-bottom 10px; }
+  style
+head
+body
+
+  table
+    captionΠίνακας Πώς επηρεάζει ο ΦΠΑ το κέρδος σουcaption
+    thead
+      tr
+        thΣενάριοth
+        thΚαθαρή τιμήth
+        thΦΠΑ 24%th
+        thΤελική τιμήth
+        thΚόστος προϊόντοςth
+        thΚέρδοςth
+      tr
+    thead
+    tbody
+      tr
+        tdΠώληση με ΦΠΑ – σωστός υπολογισμόςtd
+        td100 €td
+        td24 €td
+        td124 €td
+        td60 €td
+        td40 €td
+      tr
+      tr
+        tdΠώληση με ΦΠΑ – λάθος υπολογισμός (νομίζεις ότι 124 € είναι όλα δικά σου)td
+        td100 €td
+        td24 €td
+        td124 €td
+        td60 €td
+        td40 € αλλά νομίζεις ότι είναι 64 €td
+      tr
+      tr
+        tdΠώληση χωρίς ΦΠΑ (σε απαλλασσόμενο)td
+        td100 €td
+        td0 €td
+        td100 €td
+        td60 €td
+        td40 €td
+      tr
+      tr
+        tdΑγορά με ΦΠΑ – εκπίπτεις τον ΦΠΑtd
+        td100 €td
+        td24 €td
+        td124 €td
+        td60 € (καθαρό)td
+        td40 €td
+      tr
+      tr
+        tdΑγορά με ΦΠΑ – δεν εκπίπτεις ΦΠΑ (Ιδιώτης)td
+        td100 €td
+        td24 €td
+        td124 €td
+        td74 €td
+        td26 €td
+      tr
+    tbody
+  table
+
+body
+html
