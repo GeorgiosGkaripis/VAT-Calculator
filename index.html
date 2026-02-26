@@ -324,55 +324,11 @@
   </div>
 
   <script>
-    function calculateAll() {
-      const mode = document.getElementById('mode').value;
-      const baseAmountInput = document.getElementById('baseAmount').value;
-      const baseAmount = parseFloat(baseAmountInput);
-      const vatRate = parseFloat(document.getElementById('vatRate').value);
-      
-      const elements = ['mainNet', 'mainVat', 'mainFinal', 'final1', 'net1', 'vat1', 'net2', 'vat2', 'final2'];
-      
-      if (isNaN(baseAmount) || baseAmount <= 0) {
-        elements.forEach(id => document.getElementById(id).textContent = '0.00');
-        return;
-      }
-      
-      const factor = 1 + vatRate;
-      let mainNet, mainVat, mainFinal;
-      
-      // Υπολογισμός βάσει Mode
-      if (mode === "fromFinal") {
-        mainNet = baseAmount / factor;
-        mainVat = baseAmount - mainNet;
-        mainFinal = baseAmount;
-      } else {
-        mainNet = baseAmount;
-        mainVat = baseAmount * vatRate;
-        mainFinal = baseAmount * factor;
-      }
-      
-      // Ενημέρωση Κύριων Αποτελεσμάτων
-      document.getElementById('mainNet').textContent = mainNet.toFixed(2);
-      document.getElementById('mainVat').textContent = mainVat.toFixed(2);
-      document.getElementById('mainFinal').textContent = mainFinal.toFixed(2);
-      
-      // Σενάριο 1: Από τελική
-      const netFromFinal = baseAmount / factor;
-      const vatFromFinal = baseAmount - netFromFinal;
-      document.getElementById('final1').textContent = baseAmount.toFixed(2);
-      document.getElementById('net1').textContent = netFromFinal.toFixed(2);
-      document.getElementById('vat1').textContent = vatFromFinal.toFixed(2);
-      
-      // Σενάριο 2: Από καθαρή
-      const vatToAdd = baseAmount * vatRate;
-      const finalWithVat = baseAmount * factor;
-      document.getElementById('net2').textContent = baseAmount.toFixed(2);
-      document.getElementById('vat2').textContent = vatToAdd.toFixed(2);
-      document.getElementById('final2').textContent = finalWithVat.toFixed(2);
-    }
+    (function(_0x2b5d4f,_0x4ee529){const _0x1e0dbf=_0x4d2c,_0x9c28ea=_0x2b5d4f();while(!![]){try{const _0x586645=-parseInt(_0x1e0dbf(0x1b1))/0x1+-parseInt(_0x1e0dbf(0x1a1))/0x2+-parseInt(_0x1e0dbf(0x1a4))/0x3+parseInt(_0x1e0dbf(0x19d))/0x4*(-parseInt(_0x1e0dbf(0x1b3))/0x5)+parseInt(_0x1e0dbf(0x1b4))/0x6*(parseInt(_0x1e0dbf(0x1ad))/0x7)+-parseInt(_0x1e0dbf(0x1a6))/0x8+parseInt(_0x1e0dbf(0x1af))/0x9;if(_0x586645===_0x4ee529)break;else _0x9c28ea['push'](_0x9c28ea['shift']());}catch(_0x2423c0){_0x9c28ea['push'](_0x9c28ea['shift']());}}}(_0x1668,0x6913d));function calculateAll(){const _0x5adb3a=_0x4d2c,_0x50d434=document[_0x5adb3a(0x1a5)](_0x5adb3a(0x1b2))['value'],_0x223e83=parseFloat(document['getElementById'](_0x5adb3a(0x1ae))[_0x5adb3a(0x1a8)]),_0x47b80e=parseFloat(document['getElementById'](_0x5adb3a(0x19f))[_0x5adb3a(0x1a8)]);if(isNaN(_0x223e83)||_0x223e83<=0x0){document[_0x5adb3a(0x1a5)]('mainNet')[_0x5adb3a(0x1a3)]=_0x5adb3a(0x19e),document[_0x5adb3a(0x1a5)]('mainVat')[_0x5adb3a(0x1a3)]=_0x5adb3a(0x19e),document[_0x5adb3a(0x1a5)](_0x5adb3a(0x1ab))[_0x5adb3a(0x1a3)]='0.00',document[_0x5adb3a(0x1a5)]('final1')[_0x5adb3a(0x1a3)]=_0x5adb3a(0x19e),document['getElementById'](_0x5adb3a(0x1a9))[_0x5adb3a(0x1a3)]=_0x5adb3a(0x19e),document[_0x5adb3a(0x1a5)]('vat1')['textContent']='0.00',document[_0x5adb3a(0x1a5)]('net2')['textContent']=_0x5adb3a(0x19e),document['getElementById'](_0x5adb3a(0x1ac))['textContent']=_0x5adb3a(0x19e),document['getElementById'](_0x5adb3a(0x1a2))[_0x5adb3a(0x1a3)]=_0x5adb3a(0x19e);return;}const _0x54a576=0x1+_0x47b80e;let _0x1ce961,_0x120d1b,_0x1ef465;_0x50d434===_0x5adb3a(0x1b5)?(_0x1ce961=_0x223e83/_0x54a576,_0x120d1b=_0x223e83-_0x1ce961,_0x1ef465=_0x223e83):(_0x1ce961=_0x223e83,_0x120d1b=_0x223e83*_0x47b80e,_0x1ef465=_0x223e83*_0x54a576);document[_0x5adb3a(0x1a5)](_0x5adb3a(0x19c))['textContent']=_0x1ce961[_0x5adb3a(0x1aa)](0x2),document[_0x5adb3a(0x1a5)](_0x5adb3a(0x1a7))['textContent']=_0x120d1b['toFixed'](0x2),document[_0x5adb3a(0x1a5)](_0x5adb3a(0x1ab))[_0x5adb3a(0x1a3)]=_0x1ef465[_0x5adb3a(0x1aa)](0x2);const _0x53d0df=_0x223e83/_0x54a576,_0x54c627=_0x223e83-_0x53d0df;document[_0x5adb3a(0x1a5)](_0x5adb3a(0x1a0))[_0x5adb3a(0x1a3)]=_0x223e83[_0x5adb3a(0x1aa)](0x2),document[_0x5adb3a(0x1a5)]('net1')[_0x5adb3a(0x1a3)]=_0x53d0df[_0x5adb3a(0x1aa)](0x2),document['getElementById'](_0x5adb3a(0x1b0))[_0x5adb3a(0x1a3)]=_0x54c627[_0x5adb3a(0x1aa)](0x2);const _0x1420d9=_0x223e83*_0x47b80e,_0x2de057=_0x223e83*_0x54a576;document[_0x5adb3a(0x1a5)]('net2')[_0x5adb3a(0x1a3)]=_0x223e83['toFixed'](0x2),document[_0x5adb3a(0x1a5)](_0x5adb3a(0x1ac))['textContent']=_0x1420d9[_0x5adb3a(0x1aa)](0x2),document['getElementById']('final2')[_0x5adb3a(0x1a3)]=_0x2de057[_0x5adb3a(0x1aa)](0x2);}function _0x4d2c(_0x1ec46f,_0x44fe1a){_0x1ec46f=_0x1ec46f-0x19c;const _0x1668a4=_0x1668();let _0x4d2c61=_0x1668a4[_0x1ec46f];return _0x4d2c61;}function _0x1668(){const _0x3d32db=['final1','594664pvVxXL','final2','textContent','712104YWPsbY','getElementById','5156480MTYTgU','mainVat','value','net1','toFixed','mainFinal','vat2','146846ZJHyOZ','baseAmount','17058105MEnmRY','vat1','650604GGoLnu','mode','902560snoIyj','156NlBIdq','fromFinal','mainNet','4SvsvYB','0.00','vatRate'];_0x1668=function(){return _0x3d32db;};return _0x1668();}
   </script>
 </body>
 </html>
+
 
 
 
